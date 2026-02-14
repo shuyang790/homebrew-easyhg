@@ -38,7 +38,7 @@ jobs:
         run: |
           brew update-reset
           tap_name="${GITHUB_REPOSITORY_OWNER}/easyhg"
-          brew tap "${tap_name}" "${PWD}"
+          brew tap "${tap_name}"
           brew install --build-bottle "${tap_name}/easyhg"
 
       - name: Compute bottle release tag
