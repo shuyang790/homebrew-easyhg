@@ -1,9 +1,9 @@
 class Easyhg < Formula
   desc "Lazygit-style terminal UI for Mercurial"
   homepage "https://github.com/shuyang790/EasyHg"
-  url "https://github.com/shuyang790/EasyHg/archive/62af594d627c73c7521cceeb8bed0b8d60026b41.tar.gz"
-  sha256 "91cc249f12b7bba9b46ac4588b2f8b281d612001943b41f0a1e054c615064530"
-  version "0.2.1.dev.20260214.62af594"
+  url "https://github.com/shuyang790/EasyHg/archive/47b6af20cedbfea3d9f21c7d2dbdb1af207c487c.tar.gz"
+  sha256 "a88eec6033bb0ff4359c9d35a6172d7f68de534fbc794d4e983e420abc77b49a"
+  version "0.2.2"
   license "MIT"
 
   bottle do
@@ -20,6 +20,6 @@ class Easyhg < Formula
   end
 
   test do
-    assert_match "0.2.1", shell_output("#{bin}/easyhg --version")
+    assert_match "0.2.2", shell_output("#{bin}/easyhg --version")
   end
 end
