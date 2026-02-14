@@ -80,8 +80,10 @@ jobs:
 
       - name: Merge bottle metadata
         run: |
-          shopt -s globstar
-          json_files=(bottle-artifacts/**/*.json)
+          json_files=()
+          while IFS= read -r -d '' file; do
+            json_files+=("${file}")
+          done < <(find bottle-artifacts -type f -name '*.json' -print0)
           if [[ ${#json_files[@]} -eq 0 ]]; then
             echo "No bottle JSON files found."
             exit 1
