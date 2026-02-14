@@ -7,10 +7,10 @@ class Easyhg < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/shuyang790/homebrew-easyhg/releases/download/bottle-0.2.1.dev.20260214.62af594"
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3d925d7c82a6831d4bb12a17cef30a5e1979b538439115083add6fbae05dd0a0"
-    sha256 cellar: :any_skip_relocation, sequoia:      "62dfd833077fd64413f1c95fc0d84bc6acee06467271e34285e1e1b7ec47cfd9"
+    root_url "https://github.com/shuyang790/homebrew-easyhg/releases/download/bottle-0.2.4"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "ad06aa2e2bfa16e19a134ad1d5a349d9569a3b202107eb8faba04210e3c051d8"
+    sha256 cellar: :any_skip_relocation, sequoia:      "b402766470676e263ab5afab110cd816b521d0c4f1f248c161fafb110f4c33ea"
   end
 
   depends_on "rust" => :build
