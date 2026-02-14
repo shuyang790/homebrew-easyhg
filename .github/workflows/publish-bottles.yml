@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: macos-13
+          - runner: macos-15-intel
             bottle_tag: intel
           - runner: macos-14
             bottle_tag: arm64
@@ -37,7 +37,9 @@ jobs:
       - name: Build bottle
         run: |
           brew update-reset
-          brew install --build-bottle Formula/easyhg.rb
+          tap_name="${GITHUB_REPOSITORY_OWNER}/easyhg"
+          brew tap "${tap_name}" "${PWD}"
+          brew install --build-bottle "${tap_name}/easyhg"
 
       - name: Compute bottle release tag
         id: release_tag
